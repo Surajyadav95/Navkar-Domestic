@@ -14,8 +14,8 @@ Partial Class Summary_BCYMovement
     Dim ed As New clsEncodeDecode
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            txtfromDate.Text = Convert.ToDateTime(Now.AddDays(-7)).ToString("yyyy-MM-dd")
-            txttoDate.Text = Convert.ToDateTime(Now.AddDays(1)).ToString("yyyy-MM-dd")
+            txtfromDate.Text = Convert.ToDateTime(Now.AddDays(-7)).ToString("yyyy-MM-ddT08:00")
+            txttoDate.Text = Convert.ToDateTime(Now.AddDays(1)).ToString("yyyy-MM-ddT23:59")
             btnSave_Click(sender, e)
         End If
     End Sub

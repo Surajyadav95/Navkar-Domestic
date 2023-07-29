@@ -60,7 +60,8 @@ Partial Class Summary_BCYMovement
         dtDepoContainer.Columns.Add("Commodity")
         dtDepoContainer.Columns.Add("CommodityID")
         dtDepoContainer.Columns.Add("LEType")
-
+        dtDepoContainer.Columns.Add("OutDate")
+        dtDepoContainer.Columns.Add("CargoDescription")
         Dim dtRow2 As DataRow = dtDepoContainer.NewRow
 
         grdOutDets.DataSource = Nothing
@@ -142,7 +143,7 @@ Partial Class Summary_BCYMovement
     Protected Sub lnkDownloadExcel_Click(sender As Object, e As EventArgs)
         Try
             strSql = ""
-            strSql += "Select '' [Train No],'' [Wagon No],'' [Container No],'' [Size],'' [Gross Weight],'' [Tare Weight],'' [Net Weight],'' [Destination],'' [Seal No],'' [Pkgs],'' [Weight],'' [Type(L/E)]"
+            strSql += "Select '' [Train No],'' [Wagon No],'' [Container No],'' [Size],'' [Gross Weight],'' [Tare Weight],'' [Net Weight],'' [Destination],'' [Seal No],'' [Pkgs],'' [Weight],'' [Type(L/E)] "
             dt = db.sub_GetDatatable(strSql)
 
             If (dt.Rows.Count > 0) Then
@@ -387,7 +388,8 @@ Partial Class Summary_BCYMovement
                                     dtRow.Item("CommodityID") = 0
                                 End If
                                 dtRow.Item("LEType") = Trim(row.Cell(12).Value.ToString() & "")
-
+                                dtRow.Item("OutDate") = ""
+                                dtRow.Item("CargoDescription") = ""
                                 dtDepoContainer.Rows.Add(dtRow)
                             Else
                                 firstRow = False

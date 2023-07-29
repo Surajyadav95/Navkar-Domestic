@@ -87,7 +87,7 @@ Partial Class Account_ItemList
         strSql = " usp_Domestic_out_Date_Update '" & Trim(txtContainerno.Text) & "','" & Trim(lblEntryID.Text) & "','" & Convert.ToDateTime(Trim(txtStuffdate.Text & "")).ToString("yyyy-MM-dd HH:mm") & "' ,"
         strSql += " '" & Trim(txtStuffedPkgs.Text) & "','" & Trim(txtStuffedWeight.Text) & "','" & Trim(txtDCANo.Text) & "','" & Val(txtLoadedID.Text) & "'"
         dt3 = db.sub_GetDatatable(strSql)
-        Call db.AmmendmentLog(" " & Trim(txtContainerno.Text) & " modify Out details'" & Trim(lblEntryID.Text) & "'in Domestic_Loading ", Session("UserId_DomCFS"))
+        ''Call db.AmmendmentLog(" " & Trim(txtContainerno.Text) & " modify Out details'" & Trim(lblEntryID.Text) & "'in Domestic_Loading ", Session("UserId_DomCFS"))
         lblSession.Text = "Record updated successfully"
         ScriptManager.RegisterStartupScript(Me, Me.GetType(), "mymodalforupdate", "$('#mymodalforupdate').modal();", True)
         Control_Clear(sender, e)

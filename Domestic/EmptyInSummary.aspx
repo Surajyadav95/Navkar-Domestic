@@ -28,9 +28,9 @@
                                     Date
                                            
                                     <div class="input-group input-append date input-daterange" id="datePicker">
-                                        <asp:TextBox ID="txtfromDate" Style="width: 150px;" placeholder="mm-dd-yyyy" runat="server" TextMode="Date" Class="  form-control text-label"></asp:TextBox>
+                                        <asp:TextBox ID="txtfromDate" Style="width: 150px;" placeholder="mm-dd-yyyy" runat="server" TextMode="DateTimeLocal" Class="  form-control text-label"></asp:TextBox>
                                         <div class="input-group-addon text-label" style="width: 40px;">To</div>
-                                        <asp:TextBox ID="txttoDate" placeholder="mm-dd-yyyy" runat="server" TextMode="Date" Class="  form-control text-label"></asp:TextBox>
+                                        <asp:TextBox ID="txttoDate" placeholder="mm-dd-yyyy" runat="server" TextMode="DateTimeLocal" Class="  form-control text-label"></asp:TextBox>
                                     </div>
 
                                 </div>
